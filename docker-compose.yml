@@ -1,0 +1,17 @@
+services:
+  web:
+    build:
+      context: .
+      target: development # Varmistaa, että käytetään Dockerfilen kehitysvaihetta
+    container_name: tyomaestro-resursointi-app
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+      - WATCHPACK_POLLING=true
+    # Varmistaa, että kontti pysyy käynnissä interaktiivisesti
+    stdin_open: true
+    tty: true

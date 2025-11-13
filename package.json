@@ -1,0 +1,40 @@
+{
+  "name": "tyomaestro-resursointi",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Älykäs työmaan hallintasovellus, joka yhdistää resurssisuunnittelun, työajanseurannan ja sähköiset työmääräykset yhteen mobiili- ja web-ratkaisuun.",
+  "author": "Sami Turpeinen",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
+    "test": "jest",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.2.4"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2",
+    "tailwindcss": "^4.1.17",
+    "postcss": "^8.5.6",
+    "autoprefixer": "^10.4.22",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.6",
+    "msw": "^2.12.1",
+    "jest": "^30.2.0",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/jest-dom": "^6.9.1",
+    "jest-environment-jsdom": "^30.2.0"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx,json,css,scss,md}": "prettier --write"
+  },
+  "msw": {
+    "workerDirectory": "public"
+  }
+}
