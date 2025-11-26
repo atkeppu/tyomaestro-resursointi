@@ -1,0 +1,88 @@
+/* Reset ja perusasetukset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  background-color: #f7fafc;
+  color: #1a202c;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Pääkontaineri, joka keskittää sisällön */
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Kortti, joka sisältää kaiken tekstin */
+.card {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 2.5rem;
+  text-align: center;
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  max-width: 800px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: #4a5568;
+  margin-bottom: 2.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.grid-item {
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  transition:
+    color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.grid-item:hover {
+  color: #2b6cb0;
+  border-color: #2b6cb0;
+}
+
+.grid-item h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.grid-item p {
+  font-size: 1rem;
+  color: #718096;
+}
